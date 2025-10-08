@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: 'VT323', monospace;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+}
+
+#game-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 4px solid #8c5a2b;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #f4d03f;
+    margin: 0;
+    text-shadow: 2px 2px #8c5a2b;
+}
+
+#stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #6a4520;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+}
+
+.stat-item img {
+    width: 32px;
+    height: 32px;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#caravan-visual img {
+    width: 150px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#messages {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    min-height: 50px;
+    color: #f0e68c;
+}
+
+#controls {
+    text-align: center;
+}
+
+#travel-btn {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #8c5a2b;
+    color: #fff;
+    border: 2px solid #f4d03f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#travel-btn:hover {
+    background-color: #a96c34;
+    transform: translateY(-2px);
+    box-shadow: 0 4px #f4d03f;
+}
+
+#travel-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    border-color: #777;
+}
+
+/* Modal Styles */
+#event-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#event-modal.hidden {
+    display: none;
+}
+
+#event-content {
+    background: #3e2e1c;
+    border: 4px solid #8c5a2b;
+    border-radius: 10px;
+    padding: 30px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#event-title {
+    font-size: 2rem;
+    color: #f4d03f;
+    margin-top: 0;
+}
+
+#event-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.event-btn {
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background-color: #6a4520;
+    color: #fff;
+    border: 2px solid #f4d03f;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.event-btn:hover {
+    background-color: #8c5a2b;
+}
+

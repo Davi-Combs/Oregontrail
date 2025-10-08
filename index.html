@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oregon Trail</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Oregon Trail</h1>
+        </header>
+
+        <div id="stats-container">
+            <div class="stat-item" id="stat-distance">
+                <img src="road-sign.png" alt="Distance">
+                <div>
+                    <span id="distance">0</span> km / 1000 km
+                </div>
+            </div>
+            <div class="stat-item" id="stat-crew">
+                <img src="crew.png" alt="Crew">
+                <div>
+                    <span id="crew">5</span> Crew
+                </div>
+            </div>
+            <div class="stat-item" id="stat-oxen">
+                <img src="ox.png" alt="Oxen">
+                <div>
+                    <span id="oxen">2</span> Oxen
+                </div>
+            </div>
+            <div class="stat-item" id="stat-food">
+                <img src="food.png" alt="Food">
+                <div>
+                    <span id="food">200</span> kg
+                </div>
+            </div>
+            <div class="stat-item" id="stat-money">
+                <img src="money.png" alt="Money">
+                <div>
+                    $<span id="money">500</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="main-content">
+            <div id="caravan-visual">
+                <img src="caravan.png" alt="Caravan">
+            </div>
+            <div id="messages">
+                Welcome to the Oregon Trail! Click 'Travel' to begin your journey.
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="travel-btn">Travel the trail</button>
+        </div>
+    </div>
+
+    <div id="event-modal" class="hidden">
+        <div id="event-content">
+            <h2 id="event-title">An Event Occurs!</h2>
+            <p id="event-text"></p>
+            <div id="event-options"></div>
+        </div>
+    </div>
+    
+    <script type="module" src="main.js"></script>
+</body>
+</html>
